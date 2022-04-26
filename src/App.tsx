@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Expenses from './Components/Expenses/Expenses';
+import ClassBasedComp from './Components/Playground/ClassBasedComp/ClassBasedComp';
+import MyStyledComponent from './Components/Playground/MyStyledComp/MyStyleComp';
+import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <ErrorBoundary>
+        <MyStyledComponent/>
+      </ErrorBoundary>
+    <hr />
+
+    {/* <ClassBasedComp> </ClassBasedComp> */}
+
+      <Expenses />
     </div>
   );
 }
